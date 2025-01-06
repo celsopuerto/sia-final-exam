@@ -13,6 +13,9 @@ export default {
         foreground: "var(--foreground)",
       },
     },
+    fontFamily: {
+      inter: "inter, sans-serif",
+    },
   },
   plugins: [],
 } satisfies Config;
