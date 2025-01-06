@@ -1,0 +1,16 @@
+name: Manual Deploy to Render
+
+on:
+  workflow_dispatch: # Allows manual trigger from GitHub Actions page
+  push:
+    branches:
+      - main # Deploy on push to main branch
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Trigger Render Deployment
+      run: |
+        curl -X POST "https://api.render.com/deploy/srv-ctu2e9rv2p9s738o94rg?key=O2o4WfiZCKM"
